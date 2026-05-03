@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | À Propos</title>
+    <link rel="stylesheet" href="APropos.css">
+    <link rel="shortcut icon" href="../Images/Shortcut/Shortcut_Image.png"/>
+    <script src="APropos.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===========================
+         NAVBAR
+    =========================== -->
+    <nav class="navbar navbar-expand-xl fixed-top">
+        <div class="container-fluid">
+
+            <!-- Menu offcanvas -->
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ms-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="../index.html">ACCUEIL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="../Projets/Projets.html">PROJETS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="../Compétences/Competences.html">COMPÉTENCES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-actuel mx-lg-2" href="#">À PROPOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Titre centré -->
+            <a class="navbar-brand text-center titre" id="titre" href="../index.html">FLORIAN</a>
+
+            <!-- Icônes réseaux -->
+            <div class="div-reseau d-flex justify-content-between align-items-center gap-2 gap-md-3 me-md-3">
+                <a class="d-block order-1 order-md-0" title="LinkedIn" href="https://www.linkedin.com/in/florian-guicheteau-31a60a268/" target="_blank">
+                    <svg class="svg-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="white">
+                        <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                    </svg>
+                </a>
+                <a class="d-none d-none d-md-block" href="https://mail.google.com/mail/?view=cm&fs=1&to=florian.guicheteau49@gmail.com&su=Demande%20de%20contact&body=Bonjour,%20je%20souhaite%20vous%20contacter%20pour..." title="E-mail">
+                    <svg class="svg-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="white">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                </a>
+                <a class="order-3" title="GitHub" href="https://github.com/Florian2801" target="_blank">
+                    <svg class="svg-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="white">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Bouton burger -->
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+
+
+    <!-- ===========================
+         SECTION À PROPOS
+    =========================== -->
+    <section class="about-section">
+
+        <!-- Hero -->
+        <div class="hero">
+            <div class="hero-eyebrow">Portfolio</div>
+            <h1 class="hero-title">
+                Développeur<br><span>Full Stack.</span>
+            </h1>
+            <div class="hero-meta">
+                <div class="hero-line"></div>
+                <span class="hero-count">Junior</span>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="about-divider">
+            <span></span>
+            <div class="dot"></div>
+            <span></span>
+        </div>
+
+        <div class="about-grid">
+
+    <div class="bn-section">
+
+        <!-- Bloc identité pleine largeur -->
+        <div class="bn-identity">
+            <div class="bn-id-left">
+                <div class="bn-id-avatar">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="30" r="16" stroke="#FFFF00" stroke-width="2"/>
+                        <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" stroke="#FFFF00" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="bn-id-text">
+                    <div class="bn-id-eyebrow">DÉVELOPPEUR WEB · BTS SIO</div>
+                    <div class="bn-id-name">Florian</div>
+                    <p class="bn-id-desc">Je conçois des applications complètes, du design à l'intégration des fonctionnalités.</p>
+                </div>
+            </div>
+            <div class="bn-id-right">
+                <div class="bn-id-status">
+                    <span class="bn-id-dot"></span>
+                    <span>Disponible</span> 
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 blocs en ligne -->
+        <div class="bn-trio">
+
+            <!-- Open to work -->
+            <div class="bn-trio-card bn-trio-open">
+                <div class="bn-trio-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                        <rect x="4" y="10" width="32" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M14 10V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M4 18h32" stroke="currentColor" stroke-width="1.8"/>
+                        <circle cx="20" cy="24" r="2.5" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="bn-trio-label">OPEN TO WORK</div>
+                <div class="bn-trio-tags">
+                    <span>Emploi</span>
+                    <span>Stage</span>
+                    <span>Alternance</span>
+                </div>
+                <p class="bn-trio-desc">Prêt à relever de nouveaux défis dans un environnement stimulant.</p>
+            </div>
+
+            <!-- Méthode -->
+            <div class="bn-trio-card bn-trio-methode">
+                <div class="bn-trio-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                        <path d="M8 12h6M8 20h10M8 28h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M20 20l6-6 6 6M26 14v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="bn-trio-label">MÉTHODE</div>
+                <ul class="bn-trio-list">
+                    <li>Code propre et lisible</li>
+                    <li>Organisation et autonomie</li>
+                    <li>Curiosité continue</li>
+                    <li>Esprit d'équipe</li>
+                </ul>
+            </div>
+
+            <!-- Stack / Profil tech -->
+            <div class="bn-trio-card bn-trio-stack">
+                <div class="bn-trio-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                        <path d="M6 14l14-8 14 8-14 8-14-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        <path d="M6 20l14 8 14-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 26l14 8 14-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="bn-trio-label">PROFIL TECH</div>
+                <div class="bn-trio-stack-pills">
+                    <span>Full Stack</span>
+                    <span>BTS SIO</span>
+                    <span>Web</span>
+                    <span>Design</span>
+                </div>
+                <p class="bn-trio-desc">Du front-end au back-end, une vision complète du développement.</p>
+            </div>
+
+        </div>
+
+    </div>    </div>
+
+        <div id="cv-point"></div>
+
+        <!-- CV -->
+        <div class="div-cv" id="div-cv">
+            <h2 class="titre-cv text-center mt-4">Mon curriculum vitae :</h2>
+            <a id="cvImaged">
+                <img id="cvImage" class="cv mx-auto d-block img-fluid mt-5" src="../Images/Compétences/CV_Florian.jpg" alt="CV Florian">
+            </a>
+
+            <div class="cvClick">
+                <button class="cv-close">✕</button>
+                <img id="cvImage2" class="mx-auto d-block img-fluid p-2" src="../Images/Compétences/CV_Florian.jpg" alt="CV Florian agrandi">
+            </div>
+
+            <div class="btn-wrapper">
+                <a href="../Images/CV.pdf" target="_blank">
+                    <button class="btn-cv">
+                        Voir mon CV
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                            <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="veille-section">
+
+        <div class="veille-header-block">
+            <h2 class="titre-veille">Intégration de l'IA<br>en entreprise</h2>
+            <div class="veille-sources-row">
+                <span class="veille-src">YOUTUBE</span>
+                <span class="veille-src">TIKTOK</span>
+                <span class="veille-src">LINKEDIN</span>
+                <span class="veille-src">ARTICLES TECH</span>
+                <span class="veille-src">PRESSE TECH</span>
+            </div>
+        </div>
+
+        <!-- Cards cliquables -->
+        <div class="veille-cards">
+
+            <div class="vl-card" data-modal="modal-01">
+                <div class="vl-card-inner">
+                    <div class="vl-num">01</div>
+                    <div class="vl-theme-badge">Adoption</div>
+                    <h3 class="vl-title">Adoption de l'IA dans les entreprises</h3>
+                    <p class="vl-preview">Service client, marketing, analyse de données...</p>
+                    <div class="vl-open-hint">
+                        <span>Lire la fiche</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vl-tags">
+                        <span class="vl-tag hot">🔥 clé</span>
+                        <span class="vl-tag">Articles</span>
+                        <span class="vl-tag">LinkedIn</span>
+                    </div>
+                </div>
+                <div class="vl-glow"></div>
+            </div>
+
+            <div class="vl-card" data-modal="modal-02">
+                <div class="vl-card-inner">
+                    <div class="vl-num">02</div>
+                    <div class="vl-theme-badge">Productivité</div>
+                    <h3 class="vl-title">Gain de productivité grâce à l'IA</h3>
+                    <p class="vl-preview">Automatisation des tâches répétitives, adaptation des compétences...</p>
+                    <div class="vl-open-hint">
+                        <span>Lire la fiche</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vl-tags">
+                        <span class="vl-tag">YouTube</span>
+                        <span class="vl-tag">Études</span>
+                    </div>
+                </div>
+                <div class="vl-glow"></div>
+            </div>
+
+            <div class="vl-card" data-modal="modal-03">
+                <div class="vl-card-inner">
+                    <div class="vl-num">03</div>
+                    <div class="vl-theme-badge">Métiers</div>
+                    <h3 class="vl-title">Impact sur les métiers</h3>
+                    <p class="vl-preview">Certains automatisés, d'autres qui évoluent profondément...</p>
+                    <div class="vl-open-hint">
+                        <span>Lire la fiche</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vl-tags">
+                        <span class="vl-tag">Articles</span>
+                        <span class="vl-tag">LinkedIn</span>
+                    </div>
+                </div>
+                <div class="vl-glow"></div>
+            </div>
+
+            <div class="vl-card" data-modal="modal-04">
+                <div class="vl-card-inner">
+                    <div class="vl-num">04</div>
+                    <div class="vl-theme-badge">Risques</div>
+                    <h3 class="vl-title">Limites et risques</h3>
+                    <p class="vl-preview">Données, biais algorithmiques, dépendance aux outils...</p>
+                    <div class="vl-open-hint">
+                        <span>Lire la fiche</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vl-tags">
+                        <span class="vl-tag">Presse</span>
+                        <span class="vl-tag">Réglementation</span>
+                    </div>
+                </div>
+                <div class="vl-glow"></div>
+            </div>
+
+            <div class="vl-card" data-modal="modal-05">
+                <div class="vl-card-inner">
+                    <div class="vl-num">05</div>
+                    <div class="vl-theme-badge">Futur</div>
+                    <h3 class="vl-title">Évolution et futur de l'IA</h3>
+                    <p class="vl-preview">Intégration dans tous les secteurs, formation des équipes...</p>
+                    <div class="vl-open-hint">
+                        <span>Lire la fiche</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vl-tags">
+                        <span class="vl-tag">Veille continue</span>
+                    </div>
+                </div>
+                <div class="vl-glow"></div>
+            </div>
+
+            <div class="vl-card" data-modal="modal-06">
+                <div class="vl-card-inner">
+                    <div class="vl-num">06</div>
+                    <div class="vl-theme-badge">Éthique</div>
+                    <h3 class="vl-title">IA et éthique : vers une IA responsable</h3>
+                    <p class="vl-preview">Transparence, équité et gouvernance au coeur des débats...</p>
+                    <div class="vl-open-hint">
+                        <span>Lire la fiche</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vl-tags">
+                        <span class="vl-tag">Presse</span>
+                        <span class="vl-tag">Union Européenne</span>
+                    </div>
+                </div>
+                <div class="vl-glow"></div>
+            </div>
+
+        </div>
+
+        <div class="veille-bottom">
+            <div class="bb-dot"></div>
+            <span class="bb-text">VEILLE MISE À JOUR RÉGULIÈREMENT</span>
+            <div class="bb-line"></div>
+        </div>
+
+    </section>
+
+    <!-- MODALS VEILLE -->
+    <div class="vl-modal" id="modal-01">
+        <div class="vl-modal-panel">
+            <button class="vl-modal-close">✕</button>
+            <div class="vl-modal-num">01</div>
+            <div class="vl-modal-badge">Adoption</div>
+            <h2 class="vl-modal-title">Adoption de l'IA dans les entreprises</h2>
+            <img class="vl-modal-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&auto=format&fit=crop&q=60" alt="Intelligence artificielle en entreprise" loading="lazy"/>
+            <div class="vl-stats">
+                <div class="vl-stat">
+                    <span class="vl-stat-num">88%</span>
+                    <span class="vl-stat-label">des entreprises utilisent l'IA dans au moins 1 fonction</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">+50%</span>
+                    <span class="vl-stat-label">d'accès collaborateurs à l'IA en 2025 vs 2024</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">10%</span>
+                    <span class="vl-stat-label">des entreprises françaises utilisent l'IA (INSEE 2024)</span>
+                </div>
+            </div>
+            <p class="vl-modal-body">De plus en plus d'entreprises intègrent l'IA dans leurs processus : service client (chatbots), marketing (personnalisation) et analyse de données. En France, seulement 10 % des entreprises de +10 salariés utilisaient l'IA en 2024, contre 6 % un an plus tôt — en retrait par rapport à la moyenne européenne (13 %). Les grandes entreprises (250+ salariés) atteignent 33 % d'adoption. Selon McKinsey, 88 % des organisations mondiales utilisent désormais l'IA dans au moins une fonction, mais seules 7 % ont réussi un déploiement totalement intégré.</p>
+            <div class="vl-modal-tags"><span class="vl-tag hot">🔥 clé</span><span class="vl-tag">Articles</span><span class="vl-tag">LinkedIn</span></div>
+            <div class="vl-sources">
+                <a class="vl-source-link" href="https://www.insee.fr/fr/statistiques/8604126" target="_blank">INSEE 2024</a>
+                <a class="vl-source-link" href="https://www.libertify.com/fr/interactive-library/state-of-ai-2025-mckinsey-report/" target="_blank">McKinsey 2025</a>
+                <a class="vl-source-link" href="https://www.deloitte.com/fr/fr/services/consulting/perspectives/state-of-ai-in-the-enterprise.html" target="_blank">Deloitte 2025</a>
+            </div>
+        </div>
+        <div class="vl-modal-backdrop"></div>
+    </div>
+
+    <div class="vl-modal" id="modal-02">
+        <div class="vl-modal-panel">
+            <button class="vl-modal-close">✕</button>
+            <div class="vl-modal-num">02</div>
+            <div class="vl-modal-badge">Productivité</div>
+            <h2 class="vl-modal-title">Gain de productivité grâce à l'IA</h2>
+            <img class="vl-modal-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=60" alt="Productivité et IA" loading="lazy"/>
+            <div class="vl-stats">
+                <div class="vl-stat">
+                    <span class="vl-stat-num">40–60</span>
+                    <span class="vl-stat-label">minutes gagnées par jour et par utilisateur</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">+3%</span>
+                    <span class="vl-stat-label">de productivité/an en France possible d'ici 2030</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">4 400 Md$</span>
+                    <span class="vl-stat-label">d'opportunité productive mondiale selon McKinsey</span>
+                </div>
+            </div>
+            <p class="vl-modal-body">Les outils d'IA permettent d'automatiser certaines tâches répétitives : rédaction, analyse, développement. Les utilisateurs gagnent entre 40 et 60 minutes par jour, selon les rapports 2025 de Stanford et McKinsey. Cependant, l'impact financier réel reste limité : seulement 39 % des entreprises rapportent une augmentation de leur EBIT attribuable à l'IA, et cet impact reste inférieur à 5 % dans la majorité des cas. La création de valeur exige une refonte complète des workflows, pas seulement l'ajout d'outils.</p>
+            <div class="vl-modal-tags"><span class="vl-tag">YouTube</span><span class="vl-tag">Études</span></div>
+            <div class="vl-sources">
+                <a class="vl-source-link" href="https://fabrice-frossard.com/ia-entreprise-2025-industrialisation-agents/" target="_blank">McKinsey / Stanford 2025</a>
+                <a class="vl-source-link" href="https://bonjouria.fr/competences-ia/" target="_blank">Institut de l'Entreprise</a>
+                <a class="vl-source-link" href="https://www.deskbird.com/fr/blog/avenir-du-travail-avec-ia" target="_blank">Forum Éco. Mondial 2025</a>
+            </div>
+        </div>
+        <div class="vl-modal-backdrop"></div>
+    </div>
+
+    <div class="vl-modal" id="modal-03">
+        <div class="vl-modal-panel">
+            <button class="vl-modal-close">✕</button>
+            <div class="vl-modal-num">03</div>
+            <div class="vl-modal-badge">Métiers</div>
+            <h2 class="vl-modal-title">Impact sur les métiers</h2>
+            <img class="vl-modal-img" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=60" alt="Impact IA sur les métiers" loading="lazy"/>
+            <div class="vl-stats">
+                <div class="vl-stat">
+                    <span class="vl-stat-num">27%</span>
+                    <span class="vl-stat-label">des tâches françaises automatisées par l'IA d'ici 2030</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">45%</span>
+                    <span class="vl-stat-label">potentiel d'automatisation des tâches d'ici 2035</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">+78M</span>
+                    <span class="vl-stat-label">emplois nets créés mondialement d'ici 2030</span>
+                </div>
+            </div>
+            <p class="vl-modal-body">L'IA transforme les métiers : certains sont automatisés, d'autres évoluent profondément. Le Forum Économique Mondial estime que l'IA créera 78 millions d'emplois nets d'ici 2030, malgré le déplacement de 92 millions de postes. Les développeurs, marketeurs et analystes doivent apprendre à travailler avec ces outils. McKinsey note que l'IA profite disproportionnellement aux travailleurs moins expérimentés, leur permettant de combler l'écart avec les meilleurs — un puissant outil de montée en compétences. 32 % des entreprises anticipent une réduction de leurs effectifs liée à l'IA d'ici un an.</p>
+            <div class="vl-modal-tags"><span class="vl-tag">Articles</span><span class="vl-tag">LinkedIn</span></div>
+            <div class="vl-sources">
+                <a class="vl-source-link" href="https://bonjouria.fr/competences-ia/" target="_blank">McKinsey / Institut Entreprise</a>
+                <a class="vl-source-link" href="https://www.deskbird.com/fr/blog/avenir-du-travail-avec-ia" target="_blank">WEF 2025</a>
+                <a class="vl-source-link" href="https://fabrice-frossard.com/ia-entreprise-2025-industrialisation-agents/" target="_blank">Stanford HAI 2025</a>
+            </div>
+        </div>
+        <div class="vl-modal-backdrop"></div>
+    </div>
+
+    <div class="vl-modal" id="modal-04">
+        <div class="vl-modal-panel">
+            <button class="vl-modal-close">✕</button>
+            <div class="vl-modal-num">04</div>
+            <div class="vl-modal-badge">Risques</div>
+            <h2 class="vl-modal-title">Limites et risques de l'IA</h2>
+            <img class="vl-modal-img" src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=900&auto=format&fit=crop&q=60" alt="Risques et limites de l'IA" loading="lazy"/>
+            <div class="vl-stats">
+                <div class="vl-stat">
+                    <span class="vl-stat-num">60%</span>
+                    <span class="vl-stat-label">des salariés préoccupés par la confidentialité des données</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">55%</span>
+                    <span class="vl-stat-label">des projets IA échouent à dépasser le stade du pilote</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">35M€</span>
+                    <span class="vl-stat-label">d'amende maximale prévue par l'AI Act européen</span>
+                </div>
+            </div>
+            <p class="vl-modal-body">L'utilisation de l'IA pose des questions importantes : protection des données personnelles, biais algorithmiques, dépendance aux outils. L'Union Européenne a adopté l'AI Act en mars 2024 — premier cadre réglementaire mondial — qui classe les systèmes selon leur niveau de risque. Les sanctions peuvent atteindre 35 M€ ou 7 % du chiffre d'affaires mondial. La CNIL française a publié en juin 2025 ses recommandations sur l'utilisation licite des données pour entraîner des modèles d'IA. 55 % des projets IA restent bloqués au stade du pilote faute de gouvernance adaptée.</p>
+            <div class="vl-modal-tags"><span class="vl-tag">Presse</span><span class="vl-tag">Réglementation</span></div>
+            <div class="vl-sources">
+                <a class="vl-source-link" href="https://www.squid-impact.fr/chiffres-cles-ia-france-entreprises-2025/" target="_blank">AI Act EU 2024</a>
+                <a class="vl-source-link" href="https://www.incremys.com/ressources/blog/statistiques-ia" target="_blank">Incremys 2026</a>
+                <a class="vl-source-link" href="https://www.bitrix24.fr/articles/statistiques-cles-ia-entreprise-adoption-budgets-roi.php" target="_blank">Bitrix24 2026</a>
+            </div>
+        </div>
+        <div class="vl-modal-backdrop"></div>
+    </div>
+
+    <div class="vl-modal" id="modal-05">
+        <div class="vl-modal-panel">
+            <button class="vl-modal-close">✕</button>
+            <div class="vl-modal-num">05</div>
+            <div class="vl-modal-badge">Futur</div>
+            <h2 class="vl-modal-title">Évolution et futur de l'IA</h2>
+            <img class="vl-modal-img" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&auto=format&fit=crop&q=60" alt="Futur de l'intelligence artificielle" loading="lazy"/>
+            <div class="vl-stats">
+                <div class="vl-stat">
+                    <span class="vl-stat-num">20 Md€</span>
+                    <span class="vl-stat-label">marché IA français estimé en 2030</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">29%</span>
+                    <span class="vl-stat-label">de la valeur IA proviendra des agents autonomes en 2028</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">1 000+</span>
+                    <span class="vl-stat-label">startups IA en France en 2025, +2x depuis 2021</span>
+                </div>
+            </div>
+            <p class="vl-modal-body">L'IA va continuer à s'intégrer dans tous les secteurs. Le marché français de l'IA croît de 28,9 % par an et devrait atteindre 20 milliards d'euros en 2030. Les "agents autonomes" (Agentic AI) sont la prochaine révolution : le BCG prédit qu'ils représenteront 29 % de la valeur IA en 2028. La France se positionne : +15 Md€ d'engagements via Choose France, trois supercalculateurs nationaux, et la création de l'INESIA en 2025. Les entreprises qui n'adoptent pas une stratégie IA globale risquent de décrocher définitivement face aux "leaders" qui refondent leurs modèles opérationnels.</p>
+            <div class="vl-modal-tags"><span class="vl-tag">Veille continue</span></div>
+            <div class="vl-sources">
+                <a class="vl-source-link" href="https://www.squid-impact.fr/chiffres-cles-ia-france-entreprises-2025/" target="_blank">France IA 2025</a>
+                <a class="vl-source-link" href="https://www.incremys.com/ressources/blog/statistiques-ia" target="_blank">Incremys 2026</a>
+                <a class="vl-source-link" href="https://www.duperrin.com/2025/12/08/impact-ia-2025-mckinsey-bcg/" target="_blank">BCG / McKinsey</a>
+            </div>
+        </div>
+        <div class="vl-modal-backdrop"></div>
+    </div>
+
+    <div class="vl-modal" id="modal-06">
+        <div class="vl-modal-panel">
+            <button class="vl-modal-close">✕</button>
+            <div class="vl-modal-num">06</div>
+            <div class="vl-modal-badge">Éthique</div>
+            <h2 class="vl-modal-title">IA et éthique : vers une IA responsable</h2>
+            <img class="vl-modal-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=60" alt="Éthique et IA responsable" loading="lazy"/>
+            <div class="vl-stats">
+                <div class="vl-stat">
+                    <span class="vl-stat-num">7%</span>
+                    <span class="vl-stat-label">du CA mondial : amende max AI Act en cas d'infraction</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">2024</span>
+                    <span class="vl-stat-label">adoption de l'AI Act par le Parlement Européen</span>
+                </div>
+                <div class="vl-stat">
+                    <span class="vl-stat-num">5e</span>
+                    <span class="vl-stat-label">rang de la France au Global AI Index 2024</span>
+                </div>
+            </div>
+            <p class="vl-modal-body">L'émergence de l'IA soulève des questions éthiques fondamentales : transparence des algorithmes, équité dans les décisions automatisées, et gouvernance des données. L'AI Act européen (mars 2024) est le premier règlement mondial encadrant l'IA : il interdit les systèmes de notation sociale, impose des audits pour les systèmes à haut risque (santé, justice, transports) et garantit aux citoyens un droit de recours. La CNIL française a précisé en 2025 les conditions d'utilisation licite des données pour l'entraînement des modèles. L'éthique n'est plus un sujet périphérique : elle conditionne la confiance, l'acceptabilité sociale et la viabilité réglementaire de tout projet IA.</p>
+            <div class="vl-modal-tags"><span class="vl-tag">Presse</span><span class="vl-tag">Union Européenne</span></div>
+            <div class="vl-sources">
+                <a class="vl-source-link" href="https://www.squid-impact.fr/chiffres-cles-ia-france-entreprises-2025/" target="_blank">AI Act EU</a>
+                <a class="vl-source-link" href="https://www.incremys.com/ressources/blog/statistiques-ia" target="_blank">CNIL 2025</a>
+                <a class="vl-source-link" href="https://fabrice-frossard.com/comment-lia-redefinit-strategie-et-gouvernance-en-entreprise/" target="_blank">McKinsey Tech Trends</a>
+            </div>
+        </div>
+        <div class="vl-modal-backdrop"></div>
+    </div>
+
+    <!-- ===========================
+         FOOTER
+    =========================== -->
+    <footer id="footer">
+        <div class="row g-0">
+
+            <!-- Liens pages -->
+            <div class="col-12 col-md-6">
+                <div class="box-footer1 d-flex flex-column justify-content-center align-items-center h-100 py-4">
+                    <div class="row mb-3 mb-md-5 g-3 g-md-5 w-100 px-3 px-md-0">
+                        <div class="col-6 mb-2 mb-md-4 text-center">
+                            <a class="a-pages w-100" href="../index.html">ACCUEIL</a>
+                        </div>
+                        <div class="col-6 text-center">
+                            <a class="a-pages w-100" href="../Projets/Projets.html">PROJETS</a>
+                        </div>
+                    </div>
+                    <div class="row mt-1 g-3 g-md-5 w-100 px-3 px-md-0">
+                        <div class="col-6 text-center">
+                            <a class="a-pages w-100" href="../Compétences/Competences.html">COMPÉTENCES</a>
+                        </div>
+                        <div class="col-6 text-center">
+                            <a class="a-pages w-100" href="#">À PROPOS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact + réseaux -->
+            <div class="col-12 col-md-6">
+                <div class="row g-0">
+                    <div class="col-12 box-footer2 d-flex flex-column justify-content-center align-items-center py-4">
+                        <p class="p-email">Contactez-moi directement par mail ci-dessous !</p>
+                        <a class="a-email" href="https://mail.google.com/mail/?view=cm&fs=1&to=florian.guicheteau49@gmail.com&su=Demande%20de%20contact&body=Bonjour,%20je%20souhaite%20vous%20contacter%20pour..." target="_blank">
+                            <button class="mt-3 btn-email">CONTACTEZ-MOI</button>
+                        </a>
+                    </div>
+                    <div class="col-12 box-footer3 d-flex flex-column justify-content-center align-items-center py-4">
+                        <p class="p-suivre">Suivez-moi via les liens ci-dessous !</p>
+                        <div class="social-icons mt-3">
+                            <a class="block-linkedin2" title="LinkedIn" href="https://www.linkedin.com/in/florian-guicheteau-31a60a268/" target="_blank">
+                                <svg class="svg-linkedin2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+                            </a>
+                            <a class="block-github2" title="GitHub" href="https://github.com/Florian2801" target="_blank">
+                                <svg class="svg-github2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="div-copyright">
+            <p class="text-center copyright">© 2026 - Florian - All Right Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

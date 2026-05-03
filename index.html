@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Accueil</title>
+    <script src="index.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="Images/Shortcut/Shortcut_Image.png"/>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-xl fixed-top">
+    <div class="container-fluid">
+
+      <!-- Menu offcanvas (mobile) -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link page-actuel mx-lg-2" aria-current="page" href="#">ACCUEIL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="Projets/Projets.html">PROJETS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="Compétences/Competences.html">COMPÉTENCES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="APropos/APropos.html">À PROPOS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Burger à gauche -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Titre centré absolument -->
+      <a class="navbar-brand titre" href="#">FLORIAN</a>
+
+      <!-- Icônes réseaux à droite -->
+      <div class="div-reseau d-flex align-items-center gap-2 gap-md-3">
+        <a title="LinkedIn" href="https://www.linkedin.com/in/florian-guicheteau-31a60a268/" target="_blank" class="nav-icon">
+          <svg class="svg-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="white">
+            <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+          </svg>
+        </a>
+        <a class="nav-icon d-none d-md-block" href="https://mail.google.com/mail/?view=cm&fs=1&to=florian.guicheteau49@gmail.com&su=Demande%20de%20contact&body=Bonjour,%20je%20souhaite%20vous%20contacter%20pour..." title="E-mail">
+          <svg class="svg-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="white">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+          </svg>
+        </a>
+        <a title="GitHub" href="https://github.com/Florian2801" target="_blank" class="nav-icon">
+          <svg class="svg-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="white">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== SECTION HERO ===== -->
+  <div class="section-hero">
+    <div class="row g-0 h-100">
+      <!-- Image gauche -->
+      <div class="col-md-6 col-12 position-relative">
+        <img class="fond-moi" src="Images/Accueil/Fonds.jpg" alt="Background">
+        <img class="moi" src="Images/Accueil/image-Photoroom.png" alt="Moi">
+      </div>
+      <!-- Texte droite (masqué sur mobile) -->
+      <div class="col-md-6 d-none d-md-flex align-items-center hero-text-col">
+        <div class="hero-text-inner">
+          <h1 class="titre-portfolio2">Mon Portfolio</h1>
+          <p class="p-portfolio">Bienvenue sur mon portfolio : Explorez mes projets, mon parcours et mes compétences en développement...</p>
+          <div class="d-flex align-items-center gap-4 mt-4 mt-lg-5">
+            <a href="APropos/APropos.html#cv-point">
+              <button class="btn-cv">Voir mon CV</button>
+            </a>
+            <button class="btn-loisir">
+              <a href="Projets/Projets.html" style="text-decoration:none;">
+                <span>&nbsp;MES PROJETS&nbsp;</span>
+                <span class="span-loisir">&nbsp;MES PROJETS&nbsp;</span>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION EN SAVOIR PLUS ===== -->
+  <div class="div-scroll" id="div-scroll">
+    <h1 class="text-center titre-div-scroll1 mt-4">En savoir plus sur moi :</h1>
+
+    <div class="container mt-4 mt-md-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-7 col-texte">
+          <p class="p-savoir-plus me-md-3 mt-md-3">Bonjour ! Je m'appelle Florian, je suis passionné par le monde de l'informatique et des nouvelles technologies. J'ai pour objectif de devenir développeur polyvalent.<br><br>
+            Après mon lycée général et mon BTS Services Informatiques aux Organisations, j'ai développé une passion pour l'informatique et je suis motivé à poursuivre un master pour approfondir mes compétences et relever de nouveaux défis !<br><br>
+            Que ce soit pour un emploi, un stage ou une alternance, je suis prêt à mettre mes compétences et ma motivation à votre service.</p>
+        </div>
+        <div class="col-12 col-md-5 col-avatar d-flex justify-content-center">
+          <div class="img-home mt-4 mt-md-5">
+            <div class="img-box">
+              <div class="img-item">
+                <img class="img-bitmoji" src="Images/Accueil/image-Photoroom.png" alt="Avatar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== COMPÉTENCES ===== -->
+    <h1 class="text-center titre-div-scroll2 mt-5">Mes compétences informatiques</h1>
+
+    <div class="skills-section">
+      <img src="Images/Accueil/Développeur.jpg" class="skills-bg" alt="">
+
+      <div class="skills-overlay">
+        <div class="container">
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="skill-card">
+                <img src="Images/Accueil/Logo-html.png" alt="HTML">
+                <span>HTML</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="skill-card">
+                <img src="Images/Accueil/Logo-css.png" alt="CSS">
+                <span>CSS</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="skill-card">
+                <img class="img-js" src="Images/Accueil/Logo-javascript.png" alt="JavaScript">
+                <span>JS</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3 d-none d-xl-block">
+              <div class="skill-card">
+                <img class="img-php" src="Images/Accueil/Logo-php.png" alt="PHP">
+                <span>PHP</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="skill-card">
+                <img src="Images/Accueil/Logo-python.png" alt="Python">
+                <span>Python</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="skill-card">
+                <img src="Images/Accueil/Logo-java.webp" alt="Java">
+                <span>Java</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="skill-card">
+                <img class="img-cpp" src="Images/Accueil/Logo-C++.png" alt="C++">
+                <span>C++</span>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3 d-none d-xl-block">
+              <div class="skill-card">
+                <img src="Images/Accueil/Logo-sql.png" alt="SQL">
+                <span>SQL</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text-center mt-5 pb-4">
+            <a href="Compétences/Competences.html" class="btn-more">Voir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+      <div class="row g-0">
+
+        <!-- Liens pages -->
+        <div class="col-12 col-md-6">
+            <div class="box-footer1 d-flex flex-column justify-content-center align-items-center h-100 py-4">
+                <div class="row mb-3 mb-md-5 g-3 g-md-5 w-100 px-3 px-md-0">
+                    <div class="col-6 mb-2 mb-md-4 text-center">
+                        <a class="a-pages w-100" href="#">ACCUEIL</a>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a class="a-pages w-100" href="Projets/Projets.html">PROJETS</a>
+                    </div>
+                </div>
+                <div class="row mt-1 g-3 g-md-5 w-100 px-3 px-md-0">
+                    <div class="col-6 text-center">
+                        <a class="a-pages w-100" href="Compétences/Competences.html">COMPÉTENCES</a>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a class="a-pages w-100" href="APropos/APropos.html">À PROPOS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact + Réseaux -->
+        <div class="col-12 col-md-6 d-flex flex-column">
+          <div class="box-footer2 flex-grow-1 d-flex flex-column justify-content-center align-items-center py-4">
+            <p class="p-email mb-3">Contactez-moi directement par mail ci-dessous !</p>
+            <a class="a-email" href="https://mail.google.com/mail/?view=cm&fs=1&to=florian.guicheteau49@gmail.com&su=Demande%20de%20contact&body=Bonjour,%20je%20souhaite%20vous%20contacter%20pour..." target="_blank">
+              <button class="btn-email">CONTACTEZ-MOI</button>
+            </a>
+          </div>
+          <div class="box-footer3 flex-grow-1 d-flex flex-column justify-content-center align-items-center py-4">
+            <p class="p-suivre mb-3">Suivez-moi via les liens ci-dessous !</p>
+              <div class="social-icons mt-3">
+                  <a class="block-linkedin2" title="LinkedIn" href="https://www.linkedin.com/in/florian-guicheteau-31a60a268/" target="_blank">
+                    <svg class="svg-linkedin2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+                  </a>
+                  <a class="block-github2" title="GitHub" href="https://github.com/Florian2801" target="_blank">
+                    <svg class="svg-github2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-copyright">
+        <p class="text-center copyright mb-0">© 2026 - Florian - All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Projets</title>
+    <link rel="stylesheet" href="Projets.css">
+    <link rel="shortcut icon" href="../Images/Shortcut/Shortcut_Image.png"/>
+    <script src="Projets.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-xl fixed-top">
+    <div class="container-fluid">
+
+      <!-- Menu offcanvas (mobile) -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../index.html">ACCUEIL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-actuel mx-lg-2" aria-current="page" href="#">PROJETS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../Compétences/Competences.html">COMPÉTENCES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../APropos/APropos.html">À PROPOS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Burger à gauche -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Titre centré -->
+      <a class="navbar-brand titre" href="../index.html">FLORIAN</a>
+
+      <!-- Icônes réseaux à droite -->
+      <div class="div-reseau d-flex align-items-center gap-2 gap-md-3">
+        <a class="nav-icon" title="LinkedIn" href="https://www.linkedin.com/in/florian-guicheteau-31a60a268/" target="_blank">
+          <svg class="svg-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="white">
+            <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+          </svg>
+        </a>
+        <a class="nav-icon d-none d-md-inline-flex" href="https://mail.google.com/mail/?view=cm&fs=1&to=florian.guicheteau49@gmail.com&su=Demande%20de%20contact&body=Bonjour,%20je%20souhaite%20vous%20contacter%20pour..." title="E-mail">
+          <svg class="svg-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="white">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+          </svg>
+        </a>
+        <a class="nav-icon" title="GitHub" href="https://github.com/Florian2801" target="_blank">
+          <svg class="svg-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="white">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===== CONTENU PROJETS ===== -->
+  <div class="projets-page">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-eyebrow">Portfolio</div>
+      <h1 class="hero-title">
+        Mes<br><span>Projets.</span>
+      </h1>
+      <div class="hero-meta">
+        <div class="hero-line"></div>
+        <span class="hero-count">4 réalisations</span>
+      </div>
+    </div>
+
+    <!-- GRILLE DES PROJETS -->
+    <div class="proj-grid">
+
+      <!-- Projet 01 -->
+      <div class="proj-card" data-project="0">
+        <div class="proj-card-img-wrap">
+          <img class="proj-card-img" src="../Images/Projets/bst79.jpg" alt="BST79">
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-num">01</span>
+          <span class="proj-card-ap">AP 1</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">BST79 — Site WordPress</h3>
+          <p class="proj-card-desc">Création d'un site web vitrine professionnel pour une entreprise de chaudronnerie. Responsive et administrable sans code.</p>
+          <div class="proj-card-footer">
+            <div class="proj-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">Professionnel</span>
+            </div>
+            <button class="btn-card open-modal" data-project="0">Explorer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 02 -->
+      <div class="proj-card" data-project="1">
+        <div class="proj-card-img-wrap">
+          <img class="proj-card-img" src="../Images/Projets/toutou.png" alt="Toutou Relax">
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-num">02</span>
+          <span class="proj-card-ap">AP 2</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Pension Canine</h3>
+          <p class="proj-card-desc">Conception et développement d'un site web pour une pension canine avec réservation en ligne et présentation des services.</p>
+          <div class="proj-card-footer">
+            <div class="proj-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">UX Design</span>
+            </div>
+            <button class="btn-card open-modal" data-project="1">Explorer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 03 -->
+      <div class="proj-card" data-project="2">
+        <div class="proj-card-img-wrap">
+          <img class="proj-card-img" src="../Images/Projets/escale.png" alt="Escale">
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-num">03</span>
+          <span class="proj-card-ap">AP 3</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Escale</h3>
+          <p class="proj-card-desc">Application web de gestion portuaire permettant de suivre le cycle complet d'une escale de navire, des demandes à l'affectation du personnel.</p>
+          <div class="proj-card-footer">
+            <div class="proj-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+            <button class="btn-card open-modal" data-project="2">Explorer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 04 -->
+      <div class="proj-card" data-project="3">
+        <div class="proj-card-img-wrap">
+          <img class="proj-card-img" src="../Images/Projets/zoucolis.png" alt="Zoucolis">
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-num">04</span>
+          <span class="proj-card-ap">AP 4</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Zoucolis</h3>
+          <p class="proj-card-desc">Application web complète de livraison type Mondial Relay avec suivi en temps réel, espace client et interface administrateur.</p>
+          <div class="proj-card-footer">
+            <div class="proj-tags">
+              <span class="tag">Full-Stack</span>
+              <span class="tag">Modern Design</span>
+              <span class="tag">Performance</span>
+            </div>
+            <button class="btn-card open-modal" data-project="3">Explorer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 05 — Stage Wibaie -->
+      <div class="proj-card" data-project="4">
+        <div class="proj-card-img-wrap">
+          <img class="proj-card-img" src="../Images/Projets/wibaie.png" alt="Stage Wibaie">
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-num">05</span>
+          <span class="proj-card-ap">Stage 1</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Stage Wibaie — Gestion des contrats</h3>
+          <p class="proj-card-desc">Développement d'un applicatif intégré à l'ERP Diapason pour créer, modifier et suivre les contrats fournisseurs au sein de l'entreprise Wibaie.</p>
+          <div class="proj-card-footer">
+            <div class="proj-tags">
+              <span class="tag">ERP Diapason</span>
+              <span class="tag">Excel</span>
+              <span class="tag">GED</span>
+            </div>
+            <button class="btn-card open-modal" data-project="4">Explorer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 06 — Stage Kelio -->
+      <div class="proj-card" data-project="5">
+        <div class="proj-card-img-wrap">
+          <img class="proj-card-img" src="../Images/Projets/kelio.png" alt="Stage Kelio">
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-num">06</span>
+          <span class="proj-card-ap">Stage 2</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Stage Kelio — API Health Check</h3>
+          <p class="proj-card-desc">Développement d'un système de supervision applicative pour KodTool, exposant des endpoints REST pour vérifier en temps réel l'état de l'application et de ses dépendances.</p>
+          <div class="proj-card-footer">
+            <div class="proj-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">API REST</span>
+            </div>
+            <button class="btn-card open-modal" data-project="5">Explorer →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER NOTE -->
+    <div class="proj-card-coming-soon">
+        <span class="coming-icon">⚙</span>
+        <span class="coming-label">D'autres projets sont en cours...</span>
+    </div>
+
+    <!-- ===== MODAL PROJET ===== -->
+    <div class="proj-modal-overlay" id="projModal">
+      <div class="proj-modal">
+        <button class="proj-modal-close" id="modalClose">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="currentColor">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+          </svg>
+        </button>
+
+        <div class="proj-modal-inner">
+
+          <!-- Header -->
+          <div class="modal-header-zone">
+            <div class="modal-meta-top">
+              <span class="modal-back">← Projets</span>
+              <div class="modal-badges">
+                <span class="modal-badge-year" id="mYear"></span>
+                <span class="modal-badge-status" id="mStatus"></span>
+              </div>
+            </div>
+            <h2 class="modal-title" id="mTitle"></h2>
+            <p class="modal-subtitle" id="mSubtitle"></p>
+            <a class="modal-url" id="mUrl" href="#" target="_blank"></a>
+          </div>
+
+          <div class="modal-divider"></div>
+
+          <!-- Aperçu -->
+          <div class="modal-section">
+            <h4 class="modal-section-title">Aperçu du Projet</h4>
+            <p class="modal-text" id="mApercu"></p>
+            <img class="modal-img" id="mIMG" src="" alt="Aperçu du projet"></div>
+
+          <!-- Fonctionnalités -->
+          <div class="modal-section" id="mFeatSection">
+            <h4 class="modal-section-title">Fonctionnalités Principales</h4>
+            <div class="modal-features" id="mFeatures"></div>
+          </div>
+
+          <!-- Défis -->
+          <div class="modal-section" id="mChalSection">
+            <h4 class="modal-section-title">Défis Techniques</h4>
+            <div class="modal-challenges" id="mChallenges"></div>
+          </div>
+
+          <!-- Stats + Techno -->
+          <div class="modal-two-col">
+            <div class="modal-section modal-section-sm">
+              <h4 class="modal-section-title">Technologies</h4>
+              <div class="modal-tech-tags" id="mTechs"></div>
+            </div>
+            <div class="modal-section modal-section-sm">
+              <h4 class="modal-section-title">Statistiques</h4>
+              <div class="modal-stats" id="mStats"></div>
+            </div>
+          </div>
+
+          <div class="modal-divider"></div>
+
+          <!-- Liens + Compétences -->
+          <div class="modal-two-col">
+            <div class="modal-section modal-section-sm">
+              <h4 class="modal-section-title">Liens</h4>
+              <div class="modal-links" id="mLinks"></div>
+            </div>
+            <div class="modal-section modal-section-sm">
+              <h4 class="modal-section-title">Compétences</h4>
+              <div class="modal-skills-list" id="mSkills"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===========================
+        FOOTER
+  =========================== -->
+  <footer id="footer">
+      <div class="row g-0">
+
+          <!-- Liens pages -->
+          <div class="col-12 col-md-6">
+              <div class="box-footer1 d-flex flex-column justify-content-center align-items-center h-100 py-4">
+                  <div class="row mb-3 mb-md-5 g-3 g-md-5 w-100 px-3 px-md-0">
+                      <div class="col-6 mb-2 mb-md-4 text-center">
+                          <a class="a-pages w-100" href="../index.html">ACCUEIL</a>
+                      </div>
+                      <div class="col-6 text-center">
+                          <a class="a-pages w-100" href="../Projets/Projets.html">PROJETS</a>
+                      </div>
+                  </div>
+                  <div class="row mt-1 g-3 g-md-5 w-100 px-3 px-md-0">
+                      <div class="col-6 text-center">
+                          <a class="a-pages w-100" href="../Compétences/Competences.html">COMPÉTENCES</a>
+                      </div>
+                      <div class="col-6 text-center">
+                          <a class="a-pages w-100" href="#">À PROPOS</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Contact + réseaux -->
+          <div class="col-12 col-md-6">
+              <div class="row g-0">
+                  <div class="col-12 box-footer2 d-flex flex-column justify-content-center align-items-center py-4">
+                      <p class="p-email">Contactez-moi directement par mail ci-dessous !</p>
+                      <a class="a-email" href="https://mail.google.com/mail/?view=cm&fs=1&to=florian.guicheteau49@gmail.com&su=Demande%20de%20contact&body=Bonjour,%20je%20souhaite%20vous%20contacter%20pour..." target="_blank">
+                          <button class="mt-3 btn-email">CONTACTEZ-MOI</button>
+                      </a>
+                  </div>
+                  <div class="col-12 box-footer3 d-flex flex-column justify-content-center align-items-center py-4">
+                      <p class="p-suivre">Suivez-moi via les liens ci-dessous !</p>
+                      <div class="social-icons mt-3">
+                          <a class="block-linkedin2" title="LinkedIn" href="https://www.linkedin.com/in/florian-guicheteau-31a60a268/" target="_blank">
+                            <svg class="svg-linkedin2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+                          </a>
+                          <a class="block-github2" title="GitHub" href="https://github.com/Florian2801" target="_blank">
+                            <svg class="svg-github2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="div-copyright">
+          <p class="text-center copyright">© 2026 - Florian - All Right Reserved</p>
+      </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
