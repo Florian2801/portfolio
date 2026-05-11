@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { label: 'Complexité', value: '2 / 5' },
             ],
             links: [
-                { label: 'Site bst79', href: 'https://bst79.fr/' },
+                { label: 'Site bst79', href: '' },
                 { label: 'Documentation', href: 'https://docs.google.com/document/d/1WT-jngmFZmYqH6-r0lC0As1Rb-dmF8w0WBw9jeGjWIY/edit?usp=sharing' },
             ],
             skills: [
