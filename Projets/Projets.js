@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: 'BST 79 — Site web vitrine WordPress',
             subtitle: 'Développement d\'un site web vitrine à l\'aide du CMS WordPress afin de présenter l\'activité et les produits de l\'entreprise BST 79, une entreprise de chaudronnerie.',
             url: '',
-            urlLabel: '',
+            urlLabel: 'site bst79.com',
             apercu: 'Ce projet est un site vitrine présentant les produits et services de la chaudronnerie BST 79. Il devait être réalisé avec WordPress pour permettre au chef d\'entreprise de maîtriser le contenu de son site sans difficultés ni connaissances en développement. Le projet étant réalisé par 2 équipes, seuls l\'API Google Map et le carousel de notre projet ont été conservés dans le site final de BST79.',
             img: "../Images/Projets/bst79.jpg",
             features: [
